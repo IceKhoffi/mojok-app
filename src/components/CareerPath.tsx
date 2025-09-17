@@ -15,7 +15,7 @@ interface CareerPathProps {
 }
 
 export function CareerPath({ onNavigate }: CareerPathProps) {
-  const [selectedPath, setSelectedPath] = useState('frontend');
+  const [selectedPath, setSelectedPath] = useState<'frontend' | 'backend' | 'dataanalyst'>('frontend');
 
   const careerPaths = {
     frontend: {
