@@ -105,37 +105,43 @@ ${colorConfig
 
 const ChartTooltip = RechartsPrimitive.Tooltip;
 
-function ChartTooltipContent({
-  active,
-  payload,
-  label,
-  className,
-  indicator = "dot",
-  hideLabel = false,
-  hideIndicator = false,
-  labelFormatter,
-  labelClassName,
-  formatter,
-  color,
-  nameKey,
-  labelKey,
-}: TooltipProps<number, string> & {
-  className?: string;
-  hideLabel?: boolean;
-  hideIndicator?: boolean;
-  indicator?: "line" | "dot" | "dashed";
-  nameKey?: string;
-  labelKey?: string;
-  labelClassName?: string;
-  color?: string;
-  formatter?: (
-    value: number,
-    name: string,
-    entry: any,
-    index: number,
-    extra?: any
-  ) => React.ReactNode;
-}) {
+function ChartTooltipContent(
+  props: TooltipProps<number, string> & {
+    className?: string;
+    hideLabel?: boolean;
+    hideIndicator?: boolean;
+    indicator?: "line" | "dot" | "dashed";
+    nameKey?: string;
+    labelKey?: string;
+    labelClassName?: string;
+    color?: string;
+    formatter?: (
+      value: number,
+      name: string,
+      entry: any,
+      index: number,
+      extra?: any
+    ) => React.ReactNode;
+  }
+) {
+  const {
+    active,
+    label,
+    className,
+    indicator = "dot",
+    hideLabel = false,
+    hideIndicator = false,
+    labelFormatter,
+    labelClassName,
+    formatter,
+    color,
+    nameKey,
+    labelKey,
+  } = props;
+
+  // 👇 Fix: force payload type
+  const payload = (props as any).payload as any[] | undefined;
+
   const { config } = useChart();
 
   const tooltipLabel = React.useMemo(() => {
@@ -164,15 +170,7 @@ function ChartTooltipContent({
     }
 
     return <div className={cn("font-medium", labelClassName)}>{value}</div>;
-  }, [
-    label,
-    labelFormatter,
-    payload,
-    hideLabel,
-    labelClassName,
-    config,
-    labelKey,
-  ]);
+  }, [label, labelFormatter, payload, hideLabel, labelClassName, config, labelKey]);
 
   if (!active || !payload?.length) {
     return null;
@@ -260,17 +258,19 @@ function ChartTooltipContent({
 
 const ChartLegend = RechartsPrimitive.Legend;
 
-function ChartLegendContent({
-  className,
-  hideIcon = false,
-  payload,
-  verticalAlign = "bottom",
-  nameKey,
-}: React.ComponentProps<"div"> &
-  LegendProps & {
-    hideIcon?: boolean;
-    nameKey?: string;
-  }) {
+function ChartLegendContent(
+  props: React.ComponentProps<"div"> &
+    LegendProps & {
+      hideIcon?: boolean;
+      nameKey?: string;
+    }
+) {
+  const { className, hideIcon = false, verticalAlign = "bottom", nameKey } =
+    props;
+
+  // 👇 Fix: force payload type
+  const payload = (props as any).payload as any[] | undefined;
+
   const { config } = useChart();
 
   if (!payload?.length) {
@@ -335,7 +335,11 @@ function getPayloadConfigFromPayload(
 
   if (key in payload && typeof payload[key] === "string") {
     configLabelKey = payload[key];
-  } else if (payloadPayload && key in payloadPayload && typeof payloadPayload[key] === "string") {
+  } else if (
+    payloadPayload &&
+    key in payloadPayload &&
+    typeof payloadPayload[key] === "string"
+  ) {
     configLabelKey = payloadPayload[key];
   }
 
