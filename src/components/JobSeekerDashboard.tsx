@@ -10,10 +10,12 @@ import {
   Briefcase, Star, Clock, MapPin, Crown, Gem
 } from 'lucide-react';
 
+import type { Page } from "../types/navigation";
+
 interface JobSeekerDashboardProps {
   user: any;
   currentPage: string;
-  onNavigate: (page: string) => void;
+  onNavigate: (page: Page) => void;
 }
 
 export function JobSeekerDashboard({ user, currentPage, onNavigate }: JobSeekerDashboardProps) {

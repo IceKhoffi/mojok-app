@@ -11,9 +11,11 @@ import {
   Briefcase, Star, GraduationCap, Award, MapPin, Clock
 } from 'lucide-react';
 
+import type { Page } from "../types/navigation";
+
 interface HRDashboardProps {
   currentPage: string;
-  onNavigate: (page: string) => void;
+  onNavigate: (page: Page) => void;
 }
 
 export function HRDashboard({ currentPage, onNavigate }: HRDashboardProps) {

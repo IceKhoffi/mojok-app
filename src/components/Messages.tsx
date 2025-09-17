@@ -10,8 +10,10 @@ import {
   Building2, User, Clock, CheckCheck, Briefcase, Award
 } from 'lucide-react';
 
+import type { Page } from "../types/navigation";
+
 interface MessagesProps {
-  onNavigate: (page: string) => void;
+  onNavigate: (page: Page) => void;
 }
 
 export function Messages({ onNavigate }: MessagesProps) {
