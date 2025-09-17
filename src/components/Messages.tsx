@@ -10,7 +10,7 @@ import {
   Building2, User, Clock, CheckCheck, Briefcase, Award
 } from 'lucide-react';
 
-import type { Page } from "../types/navigation";
+import type { Page, UserType } from "../types/navigation";
 
 interface MessagesProps {
   onNavigate: (page: Page) => void;

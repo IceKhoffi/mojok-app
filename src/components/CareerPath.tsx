@@ -8,7 +8,7 @@ import {
   Target, TrendingUp, Award, BookOpen, Star, MapPin
 } from 'lucide-react';
 
-import type { Page } from "../types/navigation";
+import type { Page, UserType } from "../types/navigation";
 
 interface CareerPathProps {
   onNavigate: (page: Page) => void;

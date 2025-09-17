@@ -11,7 +11,7 @@ import {
 } from 'lucide-react';
 import { ImageWithFallback } from './ImageWithFallback';
 
-import type { Page } from "../types/navigation";
+import type { Page, UserType } from "../types/navigation";
 
 interface JobBoardProps {
   onNavigate: (page: Page) => void;

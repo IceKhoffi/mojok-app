@@ -10,7 +10,7 @@ import {
   Briefcase, Star, Clock, MapPin, Crown, Gem
 } from 'lucide-react';
 
-import type { Page } from "../types/navigation";
+import type { Page, UserType } from "../types/navigation";
 
 interface JobSeekerDashboardProps {
   user: any;
