@@ -7,7 +7,7 @@ import { JobBoard } from './components/JobBoard';
 import { CareerPath } from './components/CareerPath';
 import { Messages } from './components/Messages';
 
-import type { UserType, Page } from './types/navigation';
+import type { Page, UserType } from "./types/navigation";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<Page>('login');

@@ -14,7 +14,7 @@ import {
 import type { Page } from "../types/navigation";
 
 interface HRDashboardProps {
-  currentPage: string;
+  currentPage: Page;
   onNavigate: (page: Page) => void;
 }
 

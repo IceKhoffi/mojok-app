@@ -14,7 +14,7 @@ import type { Page } from "../types/navigation";
 
 interface JobSeekerDashboardProps {
   user: any;
-  currentPage: string;
+  currentPage: Page;
   onNavigate: (page: Page) => void;
 }
 
