@@ -14,10 +14,37 @@ interface CareerPathProps {
   onNavigate: (page: Page) => void;
 }
 
+interface Resource {
+  type: 'course' | 'certification' | 'project' | 'mentoring';
+  title: string;
+  provider: string;
+}
+
+interface Step {
+  id: number;
+  title: string;
+  status: 'completed' | 'in-progress' | 'pending';
+  description: string;
+  skills: string[];
+  duration: string;
+  cost: string;
+  resources: Resource[];
+}
+
 export function CareerPath({ onNavigate }: CareerPathProps) {
   const [selectedPath, setSelectedPath] = useState<'frontend' | 'backend' | 'dataanalyst'>('frontend');
 
-  const careerPaths = {
+  const careerPaths: Record<string, {
+      title: string;
+      currentLevel: string;
+      targetLevel: string;
+      match: number;
+      estimatedTime: string;
+      estimatedCost: string;
+      averageSalary: string;
+      demandLevel: string;
+      steps: Step[];
+    }> = {
     frontend: {
       title: 'Frontend Developer',
       currentLevel: 'Beginner',
