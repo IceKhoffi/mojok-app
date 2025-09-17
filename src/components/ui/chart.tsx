@@ -126,7 +126,6 @@ function ChartTooltipContent(
 ) {
   const {
     active,
-    label,
     className,
     indicator = "dot",
     hideLabel = false,
@@ -139,8 +138,10 @@ function ChartTooltipContent(
     labelKey,
   } = props;
 
-  // 👇 Fix: force payload type
   const payload = (props as any).payload as any[] | undefined;
+  const label = (props as any).label as string | undefined;
+
+
 
   const { config } = useChart();
 
@@ -268,8 +269,8 @@ function ChartLegendContent(
   const { className, hideIcon = false, verticalAlign = "bottom", nameKey } =
     props;
 
-  // 👇 Fix: force payload type
   const payload = (props as any).payload as any[] | undefined;
+
 
   const { config } = useChart();
 
