@@ -112,7 +112,8 @@ export function CareerPath({ onNavigate }: CareerPathProps) {
           description: 'Java or Python basics',
           skills: ['Java/Python', 'OOP', 'Data Structures'],
           duration: 'Sudah dikuasai',
-          cost: 'Gratis'
+          cost: 'Gratis',
+          resources: []
         },
         {
           id: 2,
@@ -121,7 +122,8 @@ export function CareerPath({ onNavigate }: CareerPathProps) {
           description: 'Spring Boot or Django mastery',
           skills: ['Spring Boot', 'RESTful APIs', 'MVC Pattern'],
           duration: '3-4 bulan',
-          cost: 'Rp 1.2 - 2 juta'
+          cost: 'Rp 1.2 - 2 juta',
+          resources: []
         },
         {
           id: 3,
@@ -130,7 +132,8 @@ export function CareerPath({ onNavigate }: CareerPathProps) {
           description: 'Database design and deployment',
           skills: ['SQL', 'MongoDB', 'Docker', 'AWS/GCP'],
           duration: '3 bulan',
-          cost: 'Rp 1 - 1.5 juta'
+          cost: 'Rp 1 - 1.5 juta',
+          resources: []
         },
         {
           id: 4,
@@ -139,7 +142,8 @@ export function CareerPath({ onNavigate }: CareerPathProps) {
           description: 'Scalable system architecture',
           skills: ['Microservices', 'Load Balancing', 'Caching'],
           duration: '2 bulan',
-          cost: 'Rp 800k - 1.2 juta'
+          cost: 'Rp 800k - 1.2 juta',
+          resources: []
         }
       ]
     },
@@ -160,7 +164,8 @@ export function CareerPath({ onNavigate }: CareerPathProps) {
           description: 'Statistical analysis fundamentals',
           skills: ['Statistics', 'Excel', 'Data Visualization'],
           duration: 'Sudah dikuasai',
-          cost: 'Gratis'
+          cost: 'Gratis',
+          resources: []
         },
         {
           id: 2,
@@ -169,7 +174,8 @@ export function CareerPath({ onNavigate }: CareerPathProps) {
           description: 'Python libraries for data analysis',
           skills: ['Python', 'Pandas', 'NumPy', 'Matplotlib'],
           duration: '2-3 bulan',
-          cost: 'Rp 800k - 1.2 juta'
+          cost: 'Rp 800k - 1.2 juta',
+          resources: []
         },
         {
           id: 3,
@@ -178,7 +184,8 @@ export function CareerPath({ onNavigate }: CareerPathProps) {
           description: 'Database querying and management',
           skills: ['SQL', 'PostgreSQL', 'Data Modeling'],
           duration: '1-2 bulan',
-          cost: 'Rp 400k - 800k'
+          cost: 'Rp 400k - 800k',
+          resources: []
         },
         {
           id: 4,
@@ -187,7 +194,8 @@ export function CareerPath({ onNavigate }: CareerPathProps) {
           description: 'Business intelligence and dashboards',
           skills: ['Tableau', 'Power BI', 'Data Storytelling'],
           duration: '2 bulan',
-          cost: 'Rp 800k - 1.5 juta'
+          cost: 'Rp 800k - 1.5 juta',
+          resources: []
         }
       ]
     }
