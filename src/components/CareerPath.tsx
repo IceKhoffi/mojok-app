@@ -263,7 +263,7 @@ export function CareerPath({ onNavigate }: CareerPathProps) {
               <Card 
                 key={key} 
                 className={`cursor-pointer transition-colors ${selectedPath === key ? 'border-blue-500 bg-blue-50' : 'hover:bg-gray-50'}`}
-                onClick={() => setSelectedPath(key)}
+                onClick={() => setSelectedPath(key as 'frontend' | 'backend' | 'dataanalyst')}
               >
                 <CardContent className="p-4">
                   <div className="flex justify-between items-start mb-2">
